@@ -1,0 +1,19 @@
+{
+  "name": "genetic-algorithm-art",
+  "version": "1.0.0",
+  "description": "A project that attempts to draw a target image using a genetic algorithm.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dm-istomin/genetic-algorithm-art.git"
+  },
+  "author": "Dmitriy Istomin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dm-istomin/genetic-algorithm-art/issues"
+  },
+  "homepage": "https://github.com/dm-istomin/genetic-algorithm-art#readme"
+}
