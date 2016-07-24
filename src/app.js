@@ -1,3 +1,3 @@
-import Foo from './Foo';
+import Foo from './js/Foo';
 
 console.log(new Foo().bar());

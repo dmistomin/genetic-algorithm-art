@@ -8,7 +8,7 @@ const buildPath = path.resolve(__dirname, '..', 'dist');
 
 
 module.exports = {
-  entry: path.join(rootPath, 'main.js'),
+  entry: path.join(rootPath, 'app.js'),
   output: {
     path: buildPath,
     filename: 'bundle.js',

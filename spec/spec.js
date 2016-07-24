@@ -1,6 +1,6 @@
 import { chai, expect } from 'chai';
 
-import Foo from '../src/Foo';
+import Foo from '../src/js/Foo';
 
 describe('an example test', () => {
   describe('#bar', () => {
