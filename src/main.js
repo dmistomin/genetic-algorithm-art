@@ -1,7 +1,3 @@
-class Foo {
-  bar() {
-    console.log('ES2015 compilation works!');
-  }
-}
+import Foo from './Foo';
 
-new Foo().bar();
+console.log(new Foo().bar());
