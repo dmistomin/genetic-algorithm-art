@@ -4,6 +4,7 @@
   "description": "A project that attempts to draw a target image using a genetic algorithm.",
   "main": "index.js",
   "scripts": {
+    "test": "mocha-webpack --webpack-config config/webpack.test.config.js spec/spec.js",
     "watch": "NODE_ENV=dev ./node_modules/.bin/webpack-dev-server --config config/webpack.config.js --hot --inline",
     "build": "NODE_ENV=prod ./node_modules/.bin/webpack --config config/webpack.config.js"
   },
