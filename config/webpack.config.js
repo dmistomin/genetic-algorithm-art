@@ -3,8 +3,8 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const appEnv = process.env.NODE_ENV;
-const rootPath = path.join(__dirname, 'src');
-const buildPath = path.join(__dirname, 'dist');
+const rootPath = path.resolve(__dirname, '..', 'src');
+const buildPath = path.resolve(__dirname, '..', 'dist');
 
 
 module.exports = {

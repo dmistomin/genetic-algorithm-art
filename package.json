@@ -4,9 +4,8 @@
   "description": "A project that attempts to draw a target image using a genetic algorithm.",
   "main": "index.js",
   "scripts": {
-    "test": "echo 'Not implemented yet!'",
-    "watch": "NODE_ENV=dev ./node_modules/.bin/webpack-dev-server --hot --inline",
-    "build": "NODE_ENV=prod ./node_modules/.bin/webpack"
+    "watch": "NODE_ENV=dev ./node_modules/.bin/webpack-dev-server --config config/webpack.config.js --hot --inline",
+    "build": "NODE_ENV=prod ./node_modules/.bin/webpack --config config/webpack.config.js"
   },
   "repository": {
     "type": "git",
