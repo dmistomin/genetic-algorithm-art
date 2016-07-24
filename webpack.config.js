@@ -1,16 +1,18 @@
 const path = require('path');
 const webpack = require('webpack');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const appEnv = process.env.NODE_ENV;
 const rootPath = path.join(__dirname, 'src');
 const buildPath = path.join(__dirname, 'dist');
+
 
 module.exports = {
   entry: path.join(rootPath, 'main.js'),
   output: {
     path: buildPath,
     filename: 'bundle.js',
-    publicPath: 'http://localhost:8080/build'
+    publicPath: appEnv === 'dev' ? 'http://localhost:8080/dev' : '.'
   },
   module: {
     loaders: [
@@ -25,11 +27,10 @@ module.exports = {
     ]
   },
   plugins: [
-    new CopyWebpackPlugin([
-      {
-        from: path.join(rootPath, 'index.html'),
-        to: path.join(buildPath, 'index.html')
-      }
-    ])
+    new HtmlWebpackPlugin({
+      title: 'Genetic Algorithm Art',
+      filename: 'index.html',
+      template: 'src/index.html'
+    })
   ]
 };
