@@ -2,14 +2,16 @@ import { chai, expect } from 'chai';
 
 import Foo from '../src/js/Foo';
 import Dispatcher from '../src/js/Dispatcher';
+import AppDispatcher from '../src/js/AppDispatcher';
+import Store from '../src/js/Store';
 
 describe('an example test', () => {
   describe('#bar', () => {
     it('returns a string', () => {
       expect(new Foo().bar()).to.equal('ES2015 compilation works properly!');
-    })
-  })
-})
+    });
+  });
+});
 
 describe('Dispatcher', () => {
 
@@ -51,7 +53,38 @@ describe('Dispatcher', () => {
       dispatcher.dispatch(data);
       expect(data.a).to.eq('a');
       expect(data.b).to.eq('b');
-    })
-  })
+    });
+  });
+});
+
+describe('Store', () => {
+  const data = {};
+  const dispatcher = new AppDispatcher();
+  const store = new Store();
+
+  let id = store.addListener((payload) => {
+    switch(payload.type) {
+      case 'TEST_ONE':
+        data.a = 1;
+        break;
+    }
+  });
+
+  describe('#addListener', () => {
+    it('creates a listener that fires when dispatcher is invoked', () => {
+
+      dispatcher.dispatch({type: 'TEST_ONE'});
+      expect(data.a).to.eq(1);
+    });
+  });
+
+  describe('#removeListener', () => {
+    it('removes the listener', () => {
+      store.removeListener(id);
+      data.a = 'foo';
+      dispatcher.dispatch({type: 'TEST_ONE'});
+      expect(data.a).to.eq('foo');
+    });
+  });
 });
 
