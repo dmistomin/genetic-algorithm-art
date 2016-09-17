@@ -1,17 +1,8 @@
 import { chai, expect } from 'chai';
 
-import Foo from '../src/js/Foo';
 import Dispatcher from '../src/js/Dispatcher';
 import AppDispatcher from '../src/js/AppDispatcher';
 import Store from '../src/js/Store';
-
-describe('an example test', () => {
-  describe('#bar', () => {
-    it('returns a string', () => {
-      expect(new Foo().bar()).to.equal('ES2015 compilation works properly!');
-    });
-  });
-});
 
 describe('Dispatcher', () => {
 

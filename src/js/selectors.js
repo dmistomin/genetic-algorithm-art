@@ -4,6 +4,6 @@ const selectors = {
   imageInput: document.getElementById('image-input'),
   targetImageCanvas: document.getElementById('target-image'),
   algorithmImageCanvas: document.getElementById('algorithm-image')
-}
+};
 
 export default selectors;
