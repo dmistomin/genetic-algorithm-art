@@ -10,4 +10,20 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
+.image {
+  border: 1px solid black;
+  width: 100%;
+  min-height: 75vh;
+}
+
+.button {
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  background-color: cornflowerblue;
+  color: white;
+  font-size: 1.25em;
+  padding: .25em;
+}
+
 @import "grid.scss";
